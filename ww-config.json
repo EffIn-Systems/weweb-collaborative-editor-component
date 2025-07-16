@@ -1,0 +1,27 @@
+{
+  "name": "collaborative-editor",
+  "editor": {
+    "label": {
+      "en": "Collaborative Editor"
+    },
+    "icon": "edit"
+  },
+  "properties": {
+    "roomId": {
+      "label": {
+        "en": "Room ID"
+      },
+      "type": "Text",
+      "defaultValue": "my-room",
+      "bindable": true
+    },
+    "publicApiKey": {
+      "label": {
+        "en": "Liveblocks Public Key"
+      },
+      "type": "Text",
+      "defaultValue": "",
+      "bindable": true
+    }
+  }
+}
