@@ -1,0 +1,47 @@
+{
+  "name": "@wrl04/weweb-collaborative-editor",
+  "version": "1.0.0",
+  "description": "Collaborative text editor component for WeWeb using Liveblocks",
+  "main": "dist/manager.js",
+  "files": [
+    "dist/",
+    "ww-config.json"
+  ],
+  "weweb": {
+    "componentPath": "./src/wwElement.vue"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "weweb",
+    "collaborative",
+    "editor",
+    "liveblocks",
+    "realtime"
+  ],
+  "author": "wrl04",
+  "license": "MIT",
+  "dependencies": {
+    "@liveblocks/client": "^3.1.2",
+    "@liveblocks/react": "^3.1.2",
+    "@liveblocks/react-tiptap": "^3.1.2",
+    "@liveblocks/react-ui": "^3.1.2",
+    "@tiptap/react": "^2.26.1",
+    "@tiptap/starter-kit": "^2.26.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.27.1",
+    "@babel/preset-react": "^7.27.1",
+    "@weweb/cli": "^3.8.13"
+  },
+  "scripts": {
+    "postinstall": "node patch-webpack-dev.js",
+    "serve": "weweb serve",
+    "build": "node patch-build.js && weweb build -- name=collaborative-editor type=wwobject",
+    "build:simple": "weweb build -- name=collaborative-editor type=wwobject",
+    "prepublishOnly": "npm run build"
+  }
+}
